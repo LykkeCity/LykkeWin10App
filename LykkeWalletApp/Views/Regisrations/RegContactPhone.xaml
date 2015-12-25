@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="LykkeWalletApp.Views.Regisrations.RegContactPhone"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:LykkeWalletApp.Controls"
+    mc:Ignorable="d">
+
+    <StackPanel Padding="10"  Background="{StaticResource AppBackground}">
+        <controls:RegistrationHeader Header="REGISTER" Description="Complete your profile"/>
+
+        <controls:WizardControl Height="50px"/>
+
+        <TextBox x:Name="EdtContactPhone" Header="Enter your contact phone"  Margin="0 50 0 0" KeyUp="EdtContactPhone_OnKeyUp" InputScope="TelephoneNumber" />
+
+        <Button x:Name="BtnSbmt" HorizontalAlignment="Stretch" IsEnabled="False" Click="BtnSbmt_OnClick">SUBMIT</Button>
+    </StackPanel>
+</Page>

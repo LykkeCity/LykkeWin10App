@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="LykkeWalletApp.InitView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource AppBackground}">
+
+        <StackPanel VerticalAlignment="Center">
+            <Image Source="/Images/Logo.png" Height="70"></Image>
+                <ProgressBar IsIndeterminate="True" BorderThickness="0" Height="5" Margin="20" Width="400"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="LykkeWalletApp.Views.Kyc.MakeIdCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:LykkeWalletApp.Controls"
+    mc:Ignorable="d">
+
+    <Grid Padding="0 10"  Background="{StaticResource AppBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <controls:RegistrationHeader Header="REGISTER" Description="Make a photo of your Passport or other ID"/>
+            <controls:WizardStepTwo />
+        </StackPanel>
+        <CaptureElement Grid.Row="1" Name="CapturePreview" Margin="0 30"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource BtnTransparent}" Click="BtnPickFileClick">
+                <Canvas Width="30" Height="30">
+                    <Rectangle Margin="2 2 0 0" Width="28" Height="28" Stroke="{StaticResource InfoBrush}" RadiusX="4" RadiusY="4"></Rectangle>
+                    <Rectangle Margin="1 1 0 0" Width="28" Height="28" RadiusX="4" RadiusY="4" Fill="{StaticResource AppBackground}"></Rectangle>
+                    <Rectangle Width="28" Height="28" Stroke="{StaticResource InfoBrush}" RadiusX="4" RadiusY="4" Fill="{StaticResource AppBackground}"></Rectangle>
+                </Canvas>
+            </Button>
+            <Button Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource BtnTransparent}" Click="BtnPhotoTheDoc">
+                <Grid Height="100">
+                    <Ellipse Width="95" Height="95" Fill="#FF2900"/>
+                    <Ellipse Width="80" Height="80" Stroke="White" StrokeThickness="2"/>
+                </Grid>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Page>

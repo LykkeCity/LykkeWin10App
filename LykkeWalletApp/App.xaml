@@ -1,0 +1,26 @@
+﻿<Application
+    x:Class="LykkeWalletApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LykkeWalletApp"
+    RequestedTheme="Light">
+
+
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+
+
+            <!--<ControlTemplate x:Key="TextBoxControlTemplate1" TargetType="TextBox">
+                <Border Background="{TemplateBinding Background}" x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}"
+                     BorderThickness="0" CornerRadius="6"/>
+            </ControlTemplate>-->
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

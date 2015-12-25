@@ -1,0 +1,25 @@
+﻿<UserControl
+    x:Class="LykkeWalletApp.Controls.Icon1View"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LykkeWalletApp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="150"
+    d:DesignWidth="150">
+
+    <Canvas>
+        <Rectangle Width="76" Height="32" RadiusY="5" RadiusX="5" StrokeThickness="2" Stroke="#3F4D60" Fill="{StaticResource AppBackground}" Canvas.Left="30" Canvas.Top="35"></Rectangle>
+        <Rectangle Width="93" Height="72" RadiusY="5" RadiusX="5" StrokeThickness="2" Stroke="#3F4D60" Fill="{StaticResource AppBackground}" Canvas.Left="30" Canvas.Top="42"/>
+        <Rectangle Width="26" Height="19" RadiusY="5" RadiusX="5" StrokeThickness="2" Stroke="#3F4D60" Fill="{StaticResource AppBackground}" Canvas.Left="103" Canvas.Top="68"/>
+        <Image Source="/Images/Logo.png" Width="37" Canvas.Left="52" Canvas.Top="59"></Image>
+        <Ellipse Width="7" Height="7" Fill="#AB00FF" Canvas.Left="110" Canvas.Top="74"/>
+
+
+        <Ellipse Width="150" Height="150" StrokeThickness="2" Stroke="Beige"/>
+
+
+
+    </Canvas>
+</UserControl>

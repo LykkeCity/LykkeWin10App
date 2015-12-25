@@ -1,0 +1,166 @@
+﻿<Page
+    x:Class="LykkeWalletApp.Views.Pin.PinEnteringView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LykkeWalletApp.Views.Pin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{d:DesignInstance local:PinEnteringView}"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel>
+            <Image Source="/Images/Logo.png" Width="60" Margin="0 50 0 30"></Image>
+            <StackPanel Height="140">
+                <TextBlock Style="{StaticResource InfoText}"  Text="{Binding Model.EnterPinPhrase}"/>
+                <StackPanel x:Name="PanelSecondTime">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Ellipse Style="{StaticResource PinDot}" Fill="{StaticResource LyykeMagentaBrush}"/>
+                        <Ellipse Style="{StaticResource PinDot}" Fill="{StaticResource LyykeMagentaBrush}"/>
+                        <Ellipse Style="{StaticResource PinDot}" Fill="{StaticResource LyykeMagentaBrush}"/>
+                        <Ellipse Style="{StaticResource PinDot}" Fill="{StaticResource LyykeMagentaBrush}"/>
+                        <Ellipse Style="{StaticResource PinDot}" Fill="{StaticResource LyykeMagentaBrush}"/>
+                    </StackPanel>
+                    <TextBlock Style="{StaticResource InfoText}">Enter your PIN again</TextBlock>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Ellipse Style="{StaticResource PinDot}" Fill="{Binding Model.Color0}"/>
+                    <Ellipse Style="{StaticResource PinDot}" Fill="{Binding Model.Color1}"/>
+                    <Ellipse Style="{StaticResource PinDot}" Fill="{Binding Model.Color2}"/>
+                    <Ellipse Style="{StaticResource PinDot}" Fill="{Binding Model.Color3}"/>
+                    <Ellipse Style="{StaticResource PinDot}" Fill="{Binding Model.Color4}"/>
+
+                </StackPanel>
+                <StackPanel Height="5" Margin="2" >
+                    <ProgressBar x:Name="PbLoading" Visibility="Collapsed" IsIndeterminate="True" BorderThickness="0" Height="5" />
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+        
+        <Grid Grid.Row="1" Margin="40 20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="1">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 0 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">1</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="{x:Null}"></TextBlock>
+
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="0" Grid.Column="1" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="2">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">2</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">ABC</TextBlock>
+
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="0" Grid.Column="2" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="3">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">3</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">DEF</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="1" Grid.Column="0" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="4">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">4</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">GHI</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="1" Grid.Column="1" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="5">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">5</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">JKL</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="1" Grid.Column="2" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="6">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">6</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">MNO</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+
+            <Button Grid.Row="2" Grid.Column="0" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="7">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">7</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">PQRS</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="2" Grid.Column="1" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="8">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">8</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">TUV</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="2" Grid.Column="2" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="9">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0 -4 0 0" Foreground="Black" FontSize="24" TextAlignment="Center">9</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="Gray">WXYZ</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <Button Grid.Row="3" Grid.Column="1" Padding="0" Margin="0" Style="{StaticResource BtnTransparent}" HorizontalAlignment="Center" Click="ButtonPinClick" Tag="0">
+                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Ellipse  StrokeThickness="1" Stroke="Gray" Width="60" Height="60"/>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Margin="0" Foreground="Black" FontSize="24" TextAlignment="Center">0</TextBlock>
+                        <TextBlock Margin="0 -4 0 0" Padding="0" Foreground="{x:Null}"></TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+        </Grid>
+        
+
+    </Grid>
+</Page>
